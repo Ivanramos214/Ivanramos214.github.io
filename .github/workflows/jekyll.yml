@@ -1,5 +1,14 @@
 name: Jekyll site CI
 
+<html>
+  <body>
+  
+         <p>
+            <a href="ms-windows-store://pdp/?productid=9PFPC2WNCM7C">RetroArcade Village</a>
+         </p>
+  <body>
+<html>
+
 on:
   push:
     branches: [ main ]
@@ -16,9 +25,6 @@ jobs:
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
-        -v ${{ ivanramos214.github.io }}:/srv/jekyll -v ${{ ivanramos214.github.io }}/_site:/srv/jekyll/_site \
+        -v ${{ github.workspaces }}:/srv/jekyll -v ${{ github.workspaces }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
-         <p>
-            <a href="ms-windows-store://pdp/?productid=9PFPC2WNCM7C">RetroArcade Village</a>
-         </p>
