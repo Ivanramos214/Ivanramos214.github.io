@@ -1,14 +1,8 @@
 name: Jekyll site CI
 
-<html>
-  <body>
-  
          <p>
             <a href="ms-windows-store://pdp/?productid=9PFPC2WNCM7C">RetroArcade Village</a>
          </p>
-  <body>
-<html>
-
 on:
   push:
     branches: [ main ]
